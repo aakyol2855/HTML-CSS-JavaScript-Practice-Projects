@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <canvas id="tuval" width="640" height="480" style="border: 1px solid;"  > 
+            This browser not supporting canvas
+        </canvas>
+        
+        <script>
+            var en = tuval.width;
+            var boy = tuval.height;
+            var x = en/2;
+            var y = boy/2;
+            var dx = 5;
+            var dy = 5; 
+
+            function ziplayanTop(){
+                temizle();
+                cizim.beginPath();
+                cizim.arc(x,y,15,0,2*Math.PI);
+                cizim.closePath();  
+                cizim.fillStyle = "#ff0000";
+                x=x+dx;
+                y=y+dy;
+                cizim.fill();
+            }
+
+            function temizle(){
+                cizim.beginPath();
+                cizim.fillStyle = "#ffffff";
+                cizim.fillRect(0,0,tuval.width,tuval.height);
+                cizim.closePath();
+                cizim.fill();
+            }
+
+            function tiklama(e){
+                temizle();
+                cizim.beginPath();
+                cizim.arc(e.x,e.y,15,0,2*Math.PI);
+                cizim.closePath();  
+                cizim.fillStyle = "#ff0000";
+                cizim.fill();
+            }
+
+            var tuval = document.getElementById("tuval");
+            var cizim = tuval.getContext("2d");
+
+            tuval.addEventListener('mousemove',tiklama);
+
+
+            cizim.beginPath();
+            cizim.moveTo(0,0);
+            cizim.lineTo(300,300);
+            cizim.lineTo(540,300);
+            cizim.moveTo(400,0);
+            cizim.lineTo(500,100);
+            cizim.moveTo(350,200);
+            cizim.arc(300,200,50,0,2*Math.PI);
+            cizim.font = "25px Arial";
+            cizim.fillText("Bilgisayar kavramları",300,330);
+            cizim.fillRect(500,400,100,70); // x ,y, width  heigh
+            cizim.stroke();
+        </script>
+    </body>
+    
+</html>

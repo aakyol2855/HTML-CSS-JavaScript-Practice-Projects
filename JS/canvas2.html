@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <canvas id="tuval" width="640" height="480" style="border: 1px solid;"  > 
+            This browser not supporting canvas
+        </canvas>
+        
+        <script>
+            var tuval = document.getElementById("tuval");
+            var cizim = tuval.getContext("2d");
+
+            var en = tuval.width;
+            var boy = tuval.height;
+            var x = en/2;
+            var y = boy/2;
+            var dx = 5;
+            var dy = 5; 
+
+            function ziplayanTop(){
+                temizle();
+                cizim.beginPath();
+                cizim.arc(x,y,15,0,2*Math.PI);
+                cizim.closePath();  
+                cizim.fillStyle = "#ff0000";
+                x=x+dx;
+                y=y+dy;
+                cizim.fill();
+
+                if (x>en-10 || x<10)
+                    dx = -1 * dx;
+
+                if(y> boy-10 || y<10)
+                    dy = -1* dy;
+
+                }
+
+            function temizle(){
+                cizim.beginPath();
+                cizim.fillStyle = "#ffffff";
+                cizim.fillRect(0,0,tuval.width,tuval.height);
+                cizim.closePath();
+                cizim.fill();
+            }
+
+            setInterval(ziplayanTop,15);
+           
+
+            
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <h2>Kayıt Ekranı</h2>
+        <form autocomplete="on" name="kayit" accept="kayit.aspx" method="get">
+            <table border="1">
+                <tr><th>Ad Soyad:</th><td><input type="text"
+                    name="adsoyad" autofocus placeholder="Abdulvahab Akyol"></td></tr>
+                <tr><th>E-mail:</th><td><input type="emai"
+                    name="Email" placeholder="aakyol28@outlook.com"></td></tr>
+                <tr><th>Doğum Tarihi(kapali)</th><td><input type="date" disabled></td></tr>
+                <tr><td colspan="2"><input type="submit">
+                <input type="reset"></td></tr>        
+            </table>
+        </form>
+        <h1>Örnek2</h1>
+        <form action="Kayit.php" name="adsoyad" method="get">
+            Ad Soyad: <input type="text">
+            <br>
+            Email: <input type="email">
+            <br>
+            Öneri: <textarea name="oneri"cols="20" rows="5"></textarea>
+            <br>
+            <input type="submit"> <input type="reset">
+        </form>
+    </body>
+</html>

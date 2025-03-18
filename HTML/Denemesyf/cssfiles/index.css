@@ -1,0 +1,43 @@
+body {
+    background-color:moccasin ;
+    margin:auto;
+    width: 70%;
+}
+.sol{
+    float: left;
+}
+.img
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    align-items: center;
+}
+.hr1{
+    display: block;
+    position:fixed;
+    left: 0px;
+    background-color: black;
+    border-style: solid;
+    width: 100%;
+}
+.hr2{
+    height: 2px;
+    background-color: black;
+    border-style: solid;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+}
+
+.forh1{
+    font-size: 38px;
+}
+.alt-yazi {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

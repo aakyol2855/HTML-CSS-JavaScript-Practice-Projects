@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="tr"><!--Faktöriyel hesaplayıp tabloda yazan bir js kodu-->
+    
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h2 style="color: red;">Table içerisinde js kodları kullanımı : </h2>
+        
+        <table border="1">
+            <tr><th>Sayi</th><th>Faktöriyeli</th></tr>
+
+            <script>
+                function fact(a){
+                    var ex=1;
+                    for(j=1;j<=a;j++){
+                        ex=ex*j;
+                    }
+                    return ex;
+                }
+                function fact2(a){//recursive funct
+                    if(a==0)
+                        return 1;
+                    return a*fact2(a-1);
+                }
+
+                for(i=1;i<=5;i++){
+                    document.write("<tr><td>"+i+"</td><td>"+fact2(i)+"</td></tr>");
+                }
+            </script>
+
+        </table>
+        
+    </body>
+    
+</html>
+<!--
+    
+ -->
